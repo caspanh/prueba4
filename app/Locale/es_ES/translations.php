@@ -1143,7 +1143,7 @@ return array(
     // 'OS version:' => '',
     // 'Database version:' => '',
     // 'Browser:' => '',
-    'Task view' => 'vista de tareas',
+        'Task view' => 'vista de tareas',
     'Edit task' => 'Editar tarea',
     // 'Edit description' => 'Editar Descripción',
     'New internal link' => 'Nuevo enlace interno ',

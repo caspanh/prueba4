@@ -5,10 +5,27 @@
 
 <div id="screenshot-zone">
     <p id="screenshot-inner"><?= t('Take a screenshot and press CTRL+V or ⌘+V to paste here.') ?></p>
+     <?= $this->form->hidden('task_id', $values) ?>
+    <?= $this->form->hidden('user_id', $values) ?>
+    
+    <div class="markdown-editor-small">
+        <?= $this->form->textarea(
+            'comment',
+            $values,
+            $errors,
+            array(
+                'autofocus',
+                'required',
+                'placeholder="'.t('Leave a comment').'"',
+                'data-mention-search-url="'.$this->url->href('UserHelper', 'mention', array('project_id' => $task['project_id'])).'"',
+            ),
+            'markdown-editor'
+        ) ?>
     
 </div>
 
 <form class="popover-form" action="<?= $this->url->href('TaskFile', 'screenshot', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>" method="post">
+
     <input type="hidden" name="screenshot"/>
     <?= $this->form->csrf() ?>
 

@@ -21,6 +21,7 @@
 	padding:0;
 	position:absolute;
 	width:1px;
+	
 	}
 .ui-helper-reset{
 	margin:0;
@@ -2691,7 +2692,7 @@ th a:focus,th a:hover{
 	color:#fff;
 	}
 .column-15{
-	width:15%
+	width:17%
 	}
 .column-18{
 	width:18%
