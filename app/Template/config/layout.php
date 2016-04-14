@@ -18,13 +18,13 @@
             </li>
             
             <li>
-                <i class="fa fa-life-ring fa-fw"></i>
-                <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
+                <i class="fa faeye fa-fw"></i>
+                <?= $this->url->link('Inicio', 'app', 'index', array(), false, '', t('Dashboard')) ?>
 
             </li>
 
              <li>
-                <i class="fa fa-life-ring fa-fw"></i>
+                <i class="fa fasliders fa-fw"></i>
 
                 <?= $this->url->link(t('Gantt chart'), 'gantt', 'projects') ?>
 
