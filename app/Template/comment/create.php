@@ -1,6 +1,8 @@
 <div class="page-header">
     <h2 class="modificar"><?= t('Add a comment') ?></h2>
     <hr class="r" />
+
+    
 </div>
 <form class="popover-form" method="post" action="<?= $this->url->href('comment', 'save', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>

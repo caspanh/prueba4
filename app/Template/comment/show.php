@@ -3,6 +3,7 @@
     <?= $this->avatar->render($comment['user_id'], $comment['username'], $comment['name'], $comment['email'], $comment['avatar_path']) ?>
 
     <div class="comment-title">
+    
         <?php if (! empty($comment['username'])): ?>
             <span class="comment-username"><?= $this->text->e($comment['name'] ?: $comment['username']) ?></span>
         <?php endif ?>

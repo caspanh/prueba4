@@ -40,7 +40,7 @@
             <?= $this->url->link(t('Duplicate to another project'), 'taskduplication', 'copy', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, 'popover') ?>
         </li>
         <li>
-            <i class="fa fa-clone fa-fw"></i>
+            <i class="fa faclone fa-fw"></i>
             <?= $this->url->link(t('Move to another project'), 'taskduplication', 'move', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, 'popover') ?>
         </li>
         <?php if (isset($task['is_active'])): ?>
@@ -49,7 +49,7 @@
                 <i class="fa fa-times fa-fw"></i>
                 <?= $this->url->link(t('Close this task'), 'taskstatus', 'close', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, 'popover') ?>
             <?php else: ?>
-                <i class="fa fa-check-square-o fa-fw"></i>
+                <i class="fa facheck-square-o fa-fw"></i>
                 <?= $this->url->link(t('Open this task'), 'taskstatus', 'open', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, 'popover') ?>
             <?php endif ?>
         </li>
