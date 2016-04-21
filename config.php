@@ -17,7 +17,7 @@ define('PLUGINS_DIR', 'plugins');
 define('FILES_DIR', 'data'.DIRECTORY_SEPARATOR.'files');
 
 // E-mail address for the "From" header (notifications)
-define('MAIL_FROM', 'dscorp.linx4@hotmail.com');
+define('MAIL_FROM', 'proyectos@dscorp.com.mx');
 
 // Mail transport available: "smtp", "sendmail", "mail" (PHP mail function), "postmark", "mailgun", "sendgrid"
 define('MAIL_TRANSPORT', 'mail');
