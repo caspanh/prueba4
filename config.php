@@ -23,10 +23,10 @@ define('MAIL_FROM', 'proyectos@dscorp.com.mx');
 define('MAIL_TRANSPORT', 'mail');
 
 // SMTP configuration to use when the "smtp" transport is chosen
-define('MAIL_SMTP_HOSTNAME', '');
-define('MAIL_SMTP_PORT', 25);
-define('MAIL_SMTP_USERNAME', '');
-define('MAIL_SMTP_PASSWORD', '');
+define('MAIL_SMTP_HOSTNAME', 'mails.dscorp.com.mx');
+define('MAIL_SMTP_PORT', 26);
+define('MAIL_SMTP_USERNAME', 'proyectos@dscorp.com.mx');
+define('MAIL_SMTP_PASSWORD', 'mipapro16');
 define('MAIL_SMTP_ENCRYPTION', null); // Valid values are "null", "ssl" or "tls"
 
 // Sendmail command to use when the transport is "sendmail"
