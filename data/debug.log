@@ -25530,3 +25530,602 @@
 [2016-05-11 18:33:48] [debug] MEMORY=1.6M
 [2016-05-11 18:33:48] [debug] URI=/proyectos/practicas/?controller=app&action=status&_=1462999784575
 [2016-05-11 18:33:48] [debug] ###############################################
+[2016-05-11 18:51:12] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:12] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.001392126083374 ALL_QUERIES_DURATION=0.001392126083374
+[2016-05-11 18:51:12] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00011301040649414 ALL_QUERIES_DURATION=0.0015051364898682
+[2016-05-11 18:51:12] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.4890594482422E-5 ALL_QUERIES_DURATION=0.0016000270843506
+[2016-05-11 18:51:12] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=8.6784362792969E-5 ALL_QUERIES_DURATION=0.0016868114471436
+[2016-05-11 18:51:12] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=6.0796737670898E-5 ALL_QUERIES_DURATION=0.0017476081848145
+[2016-05-11 18:51:12] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=8.6069107055664E-5 ALL_QUERIES_DURATION=0.0018336772918701
+[2016-05-11 18:51:12] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.5129013061523E-5 ALL_QUERIES_DURATION=0.0019288063049316
+[2016-05-11 18:51:12] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.608268737793E-5 ALL_QUERIES_DURATION=0.0020248889923096
+[2016-05-11 18:51:12] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.0001220703125 ALL_QUERIES_DURATION=0.0021469593048096
+[2016-05-11 18:51:12] [debug] SELECT COUNT(*) FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id" WHERE projects.id IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=8.8930130004883E-5 ALL_QUERIES_DURATION=0.0022358894348145
+[2016-05-11 18:51:12] [debug] SELECT COUNT(*) FROM "tasks" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id" WHERE tasks.owner_id = ? AND tasks.is_active = ? AND projects.is_active = ?
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00012016296386719 ALL_QUERIES_DURATION=0.0023560523986816
+[2016-05-11 18:51:12] [debug] SELECT COUNT(*) FROM "subtasks" LEFT JOIN "tasks" ON "tasks"."id"="subtasks"."task_id" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id" WHERE "user_id" = ? AND projects.is_active = ? AND subtasks.status IN (?, ?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.3936920166016E-5 ALL_QUERIES_DURATION=0.0024499893188477
+[2016-05-11 18:51:12] [debug] SELECT projects.*, users.username AS owner_username, users.name AS owner_name FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id"  WHERE projects.id IN (?, ?, ?, ?, ?)   ORDER BY projects.name ASC  LIMIT 10  OFFSET 0
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00015783309936523 ALL_QUERIES_DURATION=0.0026078224182129
+[2016-05-11 18:51:12] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00010085105895996 ALL_QUERIES_DURATION=0.0027086734771729
+[2016-05-11 18:51:12] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00011801719665527 ALL_QUERIES_DURATION=0.0028266906738281
+[2016-05-11 18:51:12] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=8.8930130004883E-5 ALL_QUERIES_DURATION=0.002915620803833
+[2016-05-11 18:51:12] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.2029571533203E-5 ALL_QUERIES_DURATION=0.0030076503753662
+[2016-05-11 18:51:12] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=8.7976455688477E-5 ALL_QUERIES_DURATION=0.0030956268310547
+[2016-05-11 18:51:12] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.2983245849609E-5 ALL_QUERIES_DURATION=0.0031886100769043
+[2016-05-11 18:51:12] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.0032777786254883
+[2016-05-11 18:51:12] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.1791152954102E-5 ALL_QUERIES_DURATION=0.0033695697784424
+[2016-05-11 18:51:12] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.5844268798828E-5 ALL_QUERIES_DURATION=0.0034654140472412
+[2016-05-11 18:51:12] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00010395050048828 ALL_QUERIES_DURATION=0.0035693645477295
+[2016-05-11 18:51:12] [debug] SELECT tasks.id, tasks.title, tasks.date_due, tasks.date_creation, tasks.project_id, tasks.color_id, tasks.time_spent, tasks.time_estimated, projects.name AS project_name FROM "tasks" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id"  WHERE tasks.owner_id = ? AND tasks.is_active = ? AND projects.is_active = ?   ORDER BY tasks.id ASC  LIMIT 10  OFFSET 0
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00010895729064941 ALL_QUERIES_DURATION=0.0036783218383789
+[2016-05-11 18:51:12] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=9.8228454589844E-5 ALL_QUERIES_DURATION=0.0037765502929688
+[2016-05-11 18:51:12] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.0001070499420166 ALL_QUERIES_DURATION=0.0038836002349854
+[2016-05-11 18:51:12] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:12] [debug] QUERY_DURATION=0.00089287757873535 ALL_QUERIES_DURATION=0.0047764778137207
+[2016-05-11 18:51:12] [debug] SQL_QUERIES=27
+[2016-05-11 18:51:12] [debug] RENDERING=0.036485910415649
+[2016-05-11 18:51:12] [debug] MEMORY=1.83M
+[2016-05-11 18:51:12] [debug] URI=/proyectos/practicas/?controller=app&action=index
+[2016-05-11 18:51:12] [debug] ###############################################
+[2016-05-11 18:51:13] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:13] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=0.0013761520385742 ALL_QUERIES_DURATION=0.0013761520385742
+[2016-05-11 18:51:13] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=0.00011491775512695 ALL_QUERIES_DURATION=0.0014910697937012
+[2016-05-11 18:51:13] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=8.392333984375E-5 ALL_QUERIES_DURATION=0.0015749931335449
+[2016-05-11 18:51:13] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=8.702278137207E-5 ALL_QUERIES_DURATION=0.001662015914917
+[2016-05-11 18:51:13] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=5.8889389038086E-5 ALL_QUERIES_DURATION=0.0017209053039551
+[2016-05-11 18:51:13] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=7.2002410888672E-5 ALL_QUERIES_DURATION=0.0017929077148438
+[2016-05-11 18:51:13] [debug] SELECT "avatar_path" FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:13] [debug] QUERY_DURATION=5.9843063354492E-5 ALL_QUERIES_DURATION=0.0018527507781982
+[2016-05-11 18:51:13] [debug] SQL_QUERIES=7
+[2016-05-11 18:51:13] [debug] RENDERING=0.013093948364258
+[2016-05-11 18:51:13] [debug] MEMORY=1.63M
+[2016-05-11 18:51:13] [debug] URI=/proyectos/practicas/?controller=AvatarFile&action=image&user_id=1&size=20
+[2016-05-11 18:51:13] [debug] ###############################################
+[2016-05-11 18:51:25] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:25] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.0022280216217041 ALL_QUERIES_DURATION=0.0022280216217041
+[2016-05-11 18:51:25] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.0001838207244873 ALL_QUERIES_DURATION=0.0024118423461914
+[2016-05-11 18:51:25] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00012397766113281 ALL_QUERIES_DURATION=0.0025358200073242
+[2016-05-11 18:51:25] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.0001671314239502 ALL_QUERIES_DURATION=0.0027029514312744
+[2016-05-11 18:51:25] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=9.0122222900391E-5 ALL_QUERIES_DURATION=0.0027930736541748
+[2016-05-11 18:51:25] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00010800361633301 ALL_QUERIES_DURATION=0.0029010772705078
+[2016-05-11 18:51:25] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.0001671314239502 ALL_QUERIES_DURATION=0.003068208694458
+[2016-05-11 18:51:25] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00014400482177734 ALL_QUERIES_DURATION=0.0032122135162354
+[2016-05-11 18:51:25] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00016117095947266 ALL_QUERIES_DURATION=0.003373384475708
+[2016-05-11 18:51:25] [debug] SELECT COUNT(*) FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id" WHERE projects.id IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00015091896057129 ALL_QUERIES_DURATION=0.0035243034362793
+[2016-05-11 18:51:25] [debug] SELECT projects.*, users.username AS owner_username, users.name AS owner_name FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id"  WHERE projects.id IN (?, ?, ?, ?, ?)   ORDER BY projects.name ASC  LIMIT 25  OFFSET 0
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00029301643371582 ALL_QUERIES_DURATION=0.0038173198699951
+[2016-05-11 18:51:25] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00011396408081055 ALL_QUERIES_DURATION=0.0039312839508057
+[2016-05-11 18:51:25] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00011706352233887 ALL_QUERIES_DURATION=0.0040483474731445
+[2016-05-11 18:51:25] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=8.7976455688477E-5 ALL_QUERIES_DURATION=0.004136323928833
+[2016-05-11 18:51:25] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.00010800361633301 ALL_QUERIES_DURATION=0.004244327545166
+[2016-05-11 18:51:25] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=8.7976455688477E-5 ALL_QUERIES_DURATION=0.0043323040008545
+[2016-05-11 18:51:25] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=8.4161758422852E-5 ALL_QUERIES_DURATION=0.0044164657592773
+[2016-05-11 18:51:25] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=8.9883804321289E-5 ALL_QUERIES_DURATION=0.0045063495635986
+[2016-05-11 18:51:25] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=9.608268737793E-5 ALL_QUERIES_DURATION=0.0046024322509766
+[2016-05-11 18:51:25] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=8.8214874267578E-5 ALL_QUERIES_DURATION=0.0046906471252441
+[2016-05-11 18:51:25] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.0047798156738281
+[2016-05-11 18:51:25] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=9.7990036010742E-5 ALL_QUERIES_DURATION=0.0048778057098389
+[2016-05-11 18:51:25] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.0001070499420166 ALL_QUERIES_DURATION=0.0049848556518555
+[2016-05-11 18:51:25] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:25] [debug] QUERY_DURATION=0.0010218620300293 ALL_QUERIES_DURATION=0.0060067176818848
+[2016-05-11 18:51:25] [debug] SQL_QUERIES=24
+[2016-05-11 18:51:25] [debug] RENDERING=0.034974098205566
+[2016-05-11 18:51:25] [debug] MEMORY=1.75M
+[2016-05-11 18:51:25] [debug] URI=/proyectos/practicas/?controller=app&action=projects&user_id=1
+[2016-05-11 18:51:25] [debug] ###############################################
+[2016-05-11 18:51:26] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:27] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.0020110607147217 ALL_QUERIES_DURATION=0.0020110607147217
+[2016-05-11 18:51:27] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00017404556274414 ALL_QUERIES_DURATION=0.0021851062774658
+[2016-05-11 18:51:27] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00012397766113281 ALL_QUERIES_DURATION=0.0023090839385986
+[2016-05-11 18:51:27] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00012993812561035 ALL_QUERIES_DURATION=0.002439022064209
+[2016-05-11 18:51:27] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=8.8930130004883E-5 ALL_QUERIES_DURATION=0.0025279521942139
+[2016-05-11 18:51:27] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00010585784912109 ALL_QUERIES_DURATION=0.002633810043335
+[2016-05-11 18:51:27] [debug] SELECT projects.*, users.username AS owner_username, users.name AS owner_name FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id"  WHERE projects.id = ?    LIMIT 1
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.0001678466796875 ALL_QUERIES_DURATION=0.0028016567230225
+[2016-05-11 18:51:27] [debug] SELECT (SELECT COUNT(*) FROM comments WHERE task_id=tasks.id) AS nb_comments, (SELECT COUNT(*) FROM task_has_files WHERE task_id=tasks.id) AS nb_files, (SELECT COUNT(*) FROM subtasks WHERE subtasks.task_id=tasks.id) AS nb_subtasks, (SELECT COUNT(*) FROM subtasks WHERE subtasks.task_id=tasks.id AND status=2) AS nb_completed_subtasks, (SELECT COUNT(*) FROM task_has_links WHERE task_has_links.task_id = tasks.id) AS nb_links, (SELECT COUNT(*) FROM task_has_external_links WHERE task_has_external_links.task_id = tasks.id) AS nb_external_links, (SELECT DISTINCT 1 FROM task_has_links WHERE task_has_links.task_id = tasks.id AND task_has_links.link_id = 9) AS is_milestone, tasks.id, tasks.reference, tasks.title, tasks.description, tasks.date_creation, tasks.date_modification, tasks.date_completed, tasks.date_started, tasks.date_due, tasks.color_id, tasks.project_id, tasks.column_id, tasks.swimlane_id, tasks.owner_id, tasks.creator_id, tasks.position, tasks.is_active, tasks.score, tasks.category_id, tasks.priority, tasks.date_moved, tasks.recurrence_status, tasks.recurrence_trigger, tasks.recurrence_factor, tasks.recurrence_timeframe, tasks.recurrence_basedate, tasks.recurrence_parent, tasks.recurrence_child, tasks.time_estimated, tasks.time_spent, users.username AS assignee_username, users.name AS assignee_name, users.email AS assignee_email, users.avatar_path AS assignee_avatar_path, project_has_categories.name AS category_name, project_has_categories.description AS category_description, columns.title AS column_name, columns.position AS column_position, swimlanes.name AS swimlane_name, projects.default_swimlane, projects.name AS project_name FROM "tasks" LEFT JOIN "users" ON "users"."id"="tasks"."owner_id" LEFT JOIN "project_has_categories" ON "project_has_categories"."id"="tasks"."category_id" LEFT JOIN "columns" ON "columns"."id"="tasks"."column_id" LEFT JOIN "swimlanes" ON "swimlanes"."id"="tasks"."swimlane_id" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id"  WHERE tasks.is_active = ? AND tasks.project_id = ?   ORDER BY tasks.position ASC
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00093817710876465 ALL_QUERIES_DURATION=0.0037398338317871
+[2016-05-11 18:51:27] [debug] SELECT "id", "name", "description" FROM "swimlanes"   WHERE "project_id" = ? AND "is_active" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00013399124145508 ALL_QUERIES_DURATION=0.0038738250732422
+[2016-05-11 18:51:27] [debug] SELECT "default_swimlane" FROM "projects"   WHERE "id" = ? AND "show_default_swimlane" = ?    LIMIT 1
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=9.2029571533203E-5 ALL_QUERIES_DURATION=0.0039658546447754
+[2016-05-11 18:51:27] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00018477439880371 ALL_QUERIES_DURATION=0.0041506290435791
+[2016-05-11 18:51:27] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00015115737915039 ALL_QUERIES_DURATION=0.0043017864227295
+[2016-05-11 18:51:27] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00016093254089355 ALL_QUERIES_DURATION=0.004462718963623
+[2016-05-11 18:51:27] [debug] SELECT "id", "name" FROM "project_has_categories"   WHERE "project_id" = ?   ORDER BY "name" ASC
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=7.2956085205078E-5 ALL_QUERIES_DURATION=0.0045356750488281
+[2016-05-11 18:51:27] [debug] SELECT 1 FROM "projects"  WHERE "id" = ? AND "is_everybody_allowed" = ?
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=6.1988830566406E-5 ALL_QUERIES_DURATION=0.0045976638793945
+[2016-05-11 18:51:27] [debug] SELECT users.id, users.username, users.name FROM "project_has_users" LEFT JOIN "users" ON "users"."id"="project_has_users"."user_id"  WHERE users.is_active = ? AND project_has_users.project_id = ? AND project_has_users.role IN (?, ?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00010108947753906 ALL_QUERIES_DURATION=0.0046987533569336
+[2016-05-11 18:51:27] [debug] SELECT users.id, users.username, users.name FROM "users" LEFT JOIN "group_has_users" ON "group_has_users"."user_id"="users"."id" LEFT JOIN "project_has_groups" ON "project_has_groups"."group_id"="group_has_users"."group_id"  WHERE project_has_groups.project_id = ? AND users.is_active = ? AND project_has_groups.role IN (?, ?)   ORDER BY users.username ASC
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00013303756713867 ALL_QUERIES_DURATION=0.0048317909240723
+[2016-05-11 18:51:27] [debug] SELECT users.name as owner_name, users.username as owner_username, custom_filters.id, custom_filters.user_id, custom_filters.project_id, custom_filters.filter, custom_filters.name, custom_filters.is_shared, custom_filters.append FROM "custom_filters" LEFT JOIN "users" ON "users"."id"="custom_filters"."user_id"  WHERE ("is_shared" = ? OR "user_id" = ?) AND "project_id" = ?   ORDER BY custom_filters.name ASC
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00011801719665527 ALL_QUERIES_DURATION=0.0049498081207275
+[2016-05-11 18:51:27] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00099802017211914 ALL_QUERIES_DURATION=0.0059478282928467
+[2016-05-11 18:51:27] [debug] SQL_QUERIES=19
+[2016-05-11 18:51:27] [debug] RENDERING=0.057890892028809
+[2016-05-11 18:51:27] [debug] MEMORY=1.92M
+[2016-05-11 18:51:27] [debug] URI=/proyectos/practicas/?controller=board&action=show&project_id=10
+[2016-05-11 18:51:27] [debug] ###############################################
+[2016-05-11 18:51:27] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:27] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.0020899772644043 ALL_QUERIES_DURATION=0.0020899772644043
+[2016-05-11 18:51:27] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00017309188842773 ALL_QUERIES_DURATION=0.002263069152832
+[2016-05-11 18:51:27] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00014090538024902 ALL_QUERIES_DURATION=0.0024039745330811
+[2016-05-11 18:51:27] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00014781951904297 ALL_QUERIES_DURATION=0.002551794052124
+[2016-05-11 18:51:27] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.002640962600708
+[2016-05-11 18:51:27] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=0.00010490417480469 ALL_QUERIES_DURATION=0.0027458667755127
+[2016-05-11 18:51:27] [debug] SELECT "avatar_path" FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:27] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.0028350353240967
+[2016-05-11 18:51:27] [debug] SQL_QUERIES=7
+[2016-05-11 18:51:27] [debug] RENDERING=0.13666415214539
+[2016-05-11 18:51:27] [debug] MEMORY=1.63M
+[2016-05-11 18:51:27] [debug] URI=/proyectos/practicas/?controller=AvatarFile&action=image&user_id=3&size=20
+[2016-05-11 18:51:27] [debug] ###############################################
+[2016-05-11 18:51:29] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:29] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.0020160675048828 ALL_QUERIES_DURATION=0.0020160675048828
+[2016-05-11 18:51:29] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00017309188842773 ALL_QUERIES_DURATION=0.0021891593933105
+[2016-05-11 18:51:29] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00012493133544922 ALL_QUERIES_DURATION=0.0023140907287598
+[2016-05-11 18:51:29] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00012993812561035 ALL_QUERIES_DURATION=0.0024440288543701
+[2016-05-11 18:51:29] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00010299682617188 ALL_QUERIES_DURATION=0.002547025680542
+[2016-05-11 18:51:29] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00021100044250488 ALL_QUERIES_DURATION=0.0027580261230469
+[2016-05-11 18:51:29] [debug] 
+            SELECT
+            tasks.id,
+            tasks.reference,
+            tasks.title,
+            tasks.description,
+            tasks.date_creation,
+            tasks.date_completed,
+            tasks.date_modification,
+            tasks.date_due,
+            tasks.date_started,
+            tasks.time_estimated,
+            tasks.time_spent,
+            tasks.color_id,
+            tasks.project_id,
+            tasks.column_id,
+            tasks.owner_id,
+            tasks.creator_id,
+            tasks.position,
+            tasks.is_active,
+            tasks.score,
+            tasks.category_id,
+            tasks.priority,
+            tasks.swimlane_id,
+            tasks.date_moved,
+            tasks.recurrence_status,
+            tasks.recurrence_trigger,
+            tasks.recurrence_factor,
+            tasks.recurrence_timeframe,
+            tasks.recurrence_basedate,
+            tasks.recurrence_parent,
+            tasks.recurrence_child,
+            project_has_categories.name AS category_name,
+            swimlanes.name AS swimlane_name,
+            projects.name AS project_name,
+            projects.default_swimlane,
+            columns.title AS column_title,
+            users.username AS assignee_username,
+            users.name AS assignee_name,
+            creators.username AS creator_username,
+            creators.name AS creator_name
+            FROM tasks
+            LEFT JOIN users ON users.id = tasks.owner_id
+            LEFT JOIN users AS creators ON creators.id = tasks.creator_id
+            LEFT JOIN project_has_categories ON project_has_categories.id = tasks.category_id
+            LEFT JOIN projects ON projects.id = tasks.project_id
+            LEFT JOIN columns ON columns.id = tasks.column_id
+            LEFT JOIN swimlanes ON swimlanes.id = tasks.swimlane_id
+            WHERE tasks.id = ?
+        
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00042200088500977 ALL_QUERIES_DURATION=0.0031800270080566
+[2016-05-11 18:51:29] [debug] SELECT comments.id, comments.date_creation, comments.task_id, comments.user_id, comments.comment, users.username, users.name, users.email, users.avatar_path FROM "comments" LEFT JOIN "users" ON "users"."id"="comments"."user_id"  WHERE comments.task_id = ?   ORDER BY comments.date_creation ASC
+[2016-05-11 18:51:29] [debug] QUERY_DURATION=0.00019288063049316 ALL_QUERIES_DURATION=0.0033729076385498
+[2016-05-11 18:51:29] [debug] SQL_QUERIES=8
+[2016-05-11 18:51:29] [debug] RENDERING=0.033973932266235
+[2016-05-11 18:51:29] [debug] MEMORY=1.74M
+[2016-05-11 18:51:29] [debug] URI=/proyectos/practicas/?controller=BoardTooltip&action=comments&task_id=6&project_id=10
+[2016-05-11 18:51:29] [debug] ###############################################
+[2016-05-11 18:51:31] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:31] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.0020589828491211 ALL_QUERIES_DURATION=0.0020589828491211
+[2016-05-11 18:51:31] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00019097328186035 ALL_QUERIES_DURATION=0.0022499561309814
+[2016-05-11 18:51:31] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00012898445129395 ALL_QUERIES_DURATION=0.0023789405822754
+[2016-05-11 18:51:31] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00012993812561035 ALL_QUERIES_DURATION=0.0025088787078857
+[2016-05-11 18:51:31] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.0025980472564697
+[2016-05-11 18:51:31] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.0001060962677002 ALL_QUERIES_DURATION=0.0027041435241699
+[2016-05-11 18:51:31] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00015997886657715 ALL_QUERIES_DURATION=0.0028641223907471
+[2016-05-11 18:51:31] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00014400482177734 ALL_QUERIES_DURATION=0.0030081272125244
+[2016-05-11 18:51:31] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00016093254089355 ALL_QUERIES_DURATION=0.003169059753418
+[2016-05-11 18:51:31] [debug] SELECT COUNT(*) FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id" WHERE projects.id IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00013303756713867 ALL_QUERIES_DURATION=0.0033020973205566
+[2016-05-11 18:51:31] [debug] SELECT COUNT(*) FROM "tasks" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id" WHERE tasks.owner_id = ? AND tasks.is_active = ? AND projects.is_active = ?
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00017213821411133 ALL_QUERIES_DURATION=0.003474235534668
+[2016-05-11 18:51:31] [debug] SELECT COUNT(*) FROM "subtasks" LEFT JOIN "tasks" ON "tasks"."id"="subtasks"."task_id" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id" WHERE "user_id" = ? AND projects.is_active = ? AND subtasks.status IN (?, ?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00015377998352051 ALL_QUERIES_DURATION=0.0036280155181885
+[2016-05-11 18:51:31] [debug] SELECT projects.*, users.username AS owner_username, users.name AS owner_name FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id"  WHERE projects.id IN (?, ?, ?, ?, ?)   ORDER BY projects.name ASC  LIMIT 10  OFFSET 0
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00029420852661133 ALL_QUERIES_DURATION=0.0039222240447998
+[2016-05-11 18:51:31] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00014996528625488 ALL_QUERIES_DURATION=0.0040721893310547
+[2016-05-11 18:51:31] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00014901161193848 ALL_QUERIES_DURATION=0.0042212009429932
+[2016-05-11 18:51:31] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00016188621520996 ALL_QUERIES_DURATION=0.0043830871582031
+[2016-05-11 18:51:31] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.0001380443572998 ALL_QUERIES_DURATION=0.0045211315155029
+[2016-05-11 18:51:31] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00013399124145508 ALL_QUERIES_DURATION=0.004655122756958
+[2016-05-11 18:51:31] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00012588500976562 ALL_QUERIES_DURATION=0.0047810077667236
+[2016-05-11 18:51:31] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00013303756713867 ALL_QUERIES_DURATION=0.0049140453338623
+[2016-05-11 18:51:31] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00013613700866699 ALL_QUERIES_DURATION=0.0050501823425293
+[2016-05-11 18:51:31] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00013184547424316 ALL_QUERIES_DURATION=0.0051820278167725
+[2016-05-11 18:51:31] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00011515617370605 ALL_QUERIES_DURATION=0.0052971839904785
+[2016-05-11 18:51:31] [debug] SELECT tasks.id, tasks.title, tasks.date_due, tasks.date_creation, tasks.project_id, tasks.color_id, tasks.time_spent, tasks.time_estimated, projects.name AS project_name FROM "tasks" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id"  WHERE tasks.owner_id = ? AND tasks.is_active = ? AND projects.is_active = ?   ORDER BY tasks.id ASC  LIMIT 10  OFFSET 0
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00010895729064941 ALL_QUERIES_DURATION=0.0054061412811279
+[2016-05-11 18:51:31] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=9.7036361694336E-5 ALL_QUERIES_DURATION=0.0055031776428223
+[2016-05-11 18:51:31] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.00011491775512695 ALL_QUERIES_DURATION=0.0056180953979492
+[2016-05-11 18:51:31] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:31] [debug] QUERY_DURATION=0.0010159015655518 ALL_QUERIES_DURATION=0.006633996963501
+[2016-05-11 18:51:31] [debug] SQL_QUERIES=27
+[2016-05-11 18:51:31] [debug] RENDERING=0.034658908843994
+[2016-05-11 18:51:31] [debug] MEMORY=1.83M
+[2016-05-11 18:51:31] [debug] URI=/proyectos/practicas/?controller=app&action=index
+[2016-05-11 18:51:31] [debug] ###############################################
+[2016-05-11 18:51:35] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:35] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.0020091533660889 ALL_QUERIES_DURATION=0.0020091533660889
+[2016-05-11 18:51:35] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00017189979553223 ALL_QUERIES_DURATION=0.0021810531616211
+[2016-05-11 18:51:35] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00012803077697754 ALL_QUERIES_DURATION=0.0023090839385986
+[2016-05-11 18:51:35] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00013089179992676 ALL_QUERIES_DURATION=0.0024399757385254
+[2016-05-11 18:51:35] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=8.8930130004883E-5 ALL_QUERIES_DURATION=0.0025289058685303
+[2016-05-11 18:51:35] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00010585784912109 ALL_QUERIES_DURATION=0.0026347637176514
+[2016-05-11 18:51:35] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00014495849609375 ALL_QUERIES_DURATION=0.0027797222137451
+[2016-05-11 18:51:35] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00017189979553223 ALL_QUERIES_DURATION=0.0029516220092773
+[2016-05-11 18:51:35] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.00016117095947266 ALL_QUERIES_DURATION=0.00311279296875
+[2016-05-11 18:51:35] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:35] [debug] QUERY_DURATION=0.0015490055084229 ALL_QUERIES_DURATION=0.0046617984771729
+[2016-05-11 18:51:35] [debug] SQL_QUERIES=10
+[2016-05-11 18:51:35] [debug] RENDERING=0.033193111419678
+[2016-05-11 18:51:35] [debug] MEMORY=1.71M
+[2016-05-11 18:51:35] [debug] URI=/proyectos/practicas/?controller=user&action=show&user_id=1
+[2016-05-11 18:51:35] [debug] ###############################################
+[2016-05-11 18:51:39] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:39] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:39] [debug] QUERY_DURATION=0.0020759105682373 ALL_QUERIES_DURATION=0.0020759105682373
+[2016-05-11 18:51:39] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:39] [debug] QUERY_DURATION=0.00018501281738281 ALL_QUERIES_DURATION=0.0022609233856201
+[2016-05-11 18:51:39] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:39] [debug] QUERY_DURATION=0.00014305114746094 ALL_QUERIES_DURATION=0.0024039745330811
+[2016-05-11 18:51:39] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:39] [debug] QUERY_DURATION=0.00013113021850586 ALL_QUERIES_DURATION=0.0025351047515869
+[2016-05-11 18:51:39] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:39] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.0026242733001709
+[2016-05-11 18:51:39] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:39] [debug] QUERY_DURATION=0.0001070499420166 ALL_QUERIES_DURATION=0.0027313232421875
+[2016-05-11 18:51:39] [debug] SQL_QUERIES=6
+[2016-05-11 18:51:39] [debug] RENDERING=0.019066095352173
+[2016-05-11 18:51:39] [debug] MEMORY=1.62M
+[2016-05-11 18:51:39] [debug] URI=/proyectos/practicas/?controller=app&action=status&_=1462999775154
+[2016-05-11 18:51:39] [debug] ###############################################
+[2016-05-11 18:51:42] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:42] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.0020091533660889 ALL_QUERIES_DURATION=0.0020091533660889
+[2016-05-11 18:51:42] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.00019001960754395 ALL_QUERIES_DURATION=0.0021991729736328
+[2016-05-11 18:51:42] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.00012683868408203 ALL_QUERIES_DURATION=0.0023260116577148
+[2016-05-11 18:51:42] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.00013184547424316 ALL_QUERIES_DURATION=0.002457857131958
+[2016-05-11 18:51:42] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=8.8930130004883E-5 ALL_QUERIES_DURATION=0.0025467872619629
+[2016-05-11 18:51:42] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.00010991096496582 ALL_QUERIES_DURATION=0.0026566982269287
+[2016-05-11 18:51:42] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.00014519691467285 ALL_QUERIES_DURATION=0.0028018951416016
+[2016-05-11 18:51:42] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.00011897087097168 ALL_QUERIES_DURATION=0.0029208660125732
+[2016-05-11 18:51:42] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.0001070499420166 ALL_QUERIES_DURATION=0.0030279159545898
+[2016-05-11 18:51:42] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:42] [debug] QUERY_DURATION=0.0010690689086914 ALL_QUERIES_DURATION=0.0040969848632812
+[2016-05-11 18:51:42] [debug] SQL_QUERIES=10
+[2016-05-11 18:51:42] [debug] RENDERING=0.034837961196899
+[2016-05-11 18:51:42] [debug] MEMORY=1.77M
+[2016-05-11 18:51:42] [debug] URI=/proyectos/practicas/?controller=user&action=edit&user_id=1
+[2016-05-11 18:51:42] [debug] ###############################################
+[2016-05-11 18:51:47] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:47] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.0020179748535156 ALL_QUERIES_DURATION=0.0020179748535156
+[2016-05-11 18:51:47] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00017094612121582 ALL_QUERIES_DURATION=0.0021889209747314
+[2016-05-11 18:51:47] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00014281272888184 ALL_QUERIES_DURATION=0.0023317337036133
+[2016-05-11 18:51:47] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00013089179992676 ALL_QUERIES_DURATION=0.00246262550354
+[2016-05-11 18:51:47] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00011086463928223 ALL_QUERIES_DURATION=0.0025734901428223
+[2016-05-11 18:51:47] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.0001070499420166 ALL_QUERIES_DURATION=0.0026805400848389
+[2016-05-11 18:51:47] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00014114379882812 ALL_QUERIES_DURATION=0.002821683883667
+[2016-05-11 18:51:47] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00018000602722168 ALL_QUERIES_DURATION=0.0030016899108887
+[2016-05-11 18:51:47] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.00016307830810547 ALL_QUERIES_DURATION=0.0031647682189941
+[2016-05-11 18:51:47] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:47] [debug] QUERY_DURATION=0.0012149810791016 ALL_QUERIES_DURATION=0.0043797492980957
+[2016-05-11 18:51:47] [debug] SQL_QUERIES=10
+[2016-05-11 18:51:47] [debug] RENDERING=0.025763034820557
+[2016-05-11 18:51:47] [debug] MEMORY=1.72M
+[2016-05-11 18:51:47] [debug] URI=/proyectos/practicas/?controller=AvatarFile&action=show&user_id=1
+[2016-05-11 18:51:47] [debug] ###############################################
+[2016-05-11 18:51:51] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:51] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=0.0013079643249512 ALL_QUERIES_DURATION=0.0013079643249512
+[2016-05-11 18:51:51] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=0.00011396408081055 ALL_QUERIES_DURATION=0.0014219284057617
+[2016-05-11 18:51:51] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=8.392333984375E-5 ALL_QUERIES_DURATION=0.0015058517456055
+[2016-05-11 18:51:51] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=8.702278137207E-5 ALL_QUERIES_DURATION=0.0015928745269775
+[2016-05-11 18:51:51] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=6.0081481933594E-5 ALL_QUERIES_DURATION=0.0016529560089111
+[2016-05-11 18:51:51] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=7.1048736572266E-5 ALL_QUERIES_DURATION=0.0017240047454834
+[2016-05-11 18:51:51] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=0.00011014938354492 ALL_QUERIES_DURATION=0.0018341541290283
+[2016-05-11 18:51:51] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=9.9897384643555E-5 ALL_QUERIES_DURATION=0.0019340515136719
+[2016-05-11 18:51:51] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=0.0001060962677002 ALL_QUERIES_DURATION=0.0020401477813721
+[2016-05-11 18:51:51] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:51] [debug] QUERY_DURATION=0.0010499954223633 ALL_QUERIES_DURATION=0.0030901432037354
+[2016-05-11 18:51:51] [debug] SQL_QUERIES=10
+[2016-05-11 18:51:51] [debug] RENDERING=0.018206834793091
+[2016-05-11 18:51:51] [debug] MEMORY=1.72M
+[2016-05-11 18:51:51] [debug] URI=/proyectos/practicas/?controller=user&action=password&user_id=1
+[2016-05-11 18:51:51] [debug] ###############################################
+[2016-05-11 18:51:54] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:54] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.0023889541625977 ALL_QUERIES_DURATION=0.0023889541625977
+[2016-05-11 18:51:54] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.00017499923706055 ALL_QUERIES_DURATION=0.0025639533996582
+[2016-05-11 18:51:54] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.00014185905456543 ALL_QUERIES_DURATION=0.0027058124542236
+[2016-05-11 18:51:54] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.00013184547424316 ALL_QUERIES_DURATION=0.0028376579284668
+[2016-05-11 18:51:54] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=9.1075897216797E-5 ALL_QUERIES_DURATION=0.0029287338256836
+[2016-05-11 18:51:54] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.0001060962677002 ALL_QUERIES_DURATION=0.0030348300933838
+[2016-05-11 18:51:54] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.00014710426330566 ALL_QUERIES_DURATION=0.0031819343566895
+[2016-05-11 18:51:54] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=9.7990036010742E-5 ALL_QUERIES_DURATION=0.0032799243927002
+[2016-05-11 18:51:54] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.0001070499420166 ALL_QUERIES_DURATION=0.0033869743347168
+[2016-05-11 18:51:54] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:54] [debug] QUERY_DURATION=0.00083303451538086 ALL_QUERIES_DURATION=0.0042200088500977
+[2016-05-11 18:51:54] [debug] SQL_QUERIES=10
+[2016-05-11 18:51:54] [debug] RENDERING=0.024573087692261
+[2016-05-11 18:51:54] [debug] MEMORY=1.72M
+[2016-05-11 18:51:54] [debug] URI=/proyectos/practicas/?controller=user&action=authentication&user_id=1
+[2016-05-11 18:51:54] [debug] ###############################################
+[2016-05-11 18:51:57] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:57] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.0020279884338379 ALL_QUERIES_DURATION=0.0020279884338379
+[2016-05-11 18:51:57] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.00017189979553223 ALL_QUERIES_DURATION=0.0021998882293701
+[2016-05-11 18:51:57] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.00012397766113281 ALL_QUERIES_DURATION=0.0023238658905029
+[2016-05-11 18:51:57] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.00014281272888184 ALL_QUERIES_DURATION=0.0024666786193848
+[2016-05-11 18:51:57] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=8.8930130004883E-5 ALL_QUERIES_DURATION=0.0025556087493896
+[2016-05-11 18:51:57] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.0001060962677002 ALL_QUERIES_DURATION=0.0026617050170898
+[2016-05-11 18:51:57] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.00010299682617188 ALL_QUERIES_DURATION=0.0027647018432617
+[2016-05-11 18:51:57] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=9.7036361694336E-5 ALL_QUERIES_DURATION=0.0028617382049561
+[2016-05-11 18:51:57] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.0001068115234375 ALL_QUERIES_DURATION=0.0029685497283936
+[2016-05-11 18:51:57] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:57] [debug] QUERY_DURATION=0.00091791152954102 ALL_QUERIES_DURATION=0.0038864612579346
+[2016-05-11 18:51:57] [debug] SQL_QUERIES=10
+[2016-05-11 18:51:57] [debug] RENDERING=0.021834850311279
+[2016-05-11 18:51:57] [debug] MEMORY=1.7M
+[2016-05-11 18:51:57] [debug] URI=/proyectos/practicas/?controller=user&action=show&user_id=1
+[2016-05-11 18:51:57] [debug] ###############################################
+[2016-05-11 18:51:58] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:51:58] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.0020251274108887 ALL_QUERIES_DURATION=0.0020251274108887
+[2016-05-11 18:51:58] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00017189979553223 ALL_QUERIES_DURATION=0.0021970272064209
+[2016-05-11 18:51:58] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00012397766113281 ALL_QUERIES_DURATION=0.0023210048675537
+[2016-05-11 18:51:58] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.0001530647277832 ALL_QUERIES_DURATION=0.0024740695953369
+[2016-05-11 18:51:58] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=8.7976455688477E-5 ALL_QUERIES_DURATION=0.0025620460510254
+[2016-05-11 18:51:58] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00012803077697754 ALL_QUERIES_DURATION=0.0026900768280029
+[2016-05-11 18:51:58] [debug] SELECT * FROM "users"   WHERE "id" = ?    LIMIT 1
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00014209747314453 ALL_QUERIES_DURATION=0.0028321743011475
+[2016-05-11 18:51:58] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00016093254089355 ALL_QUERIES_DURATION=0.002993106842041
+[2016-05-11 18:51:58] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00016188621520996 ALL_QUERIES_DURATION=0.003154993057251
+[2016-05-11 18:51:58] [debug] SELECT COUNT(*) FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id" WHERE projects.id IN (?, ?, ?, ?, ?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00013208389282227 ALL_QUERIES_DURATION=0.0032870769500732
+[2016-05-11 18:51:58] [debug] SELECT COUNT(*) FROM "tasks" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id" WHERE tasks.owner_id = ? AND tasks.is_active = ? AND projects.is_active = ?
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00019001960754395 ALL_QUERIES_DURATION=0.0034770965576172
+[2016-05-11 18:51:58] [debug] SELECT COUNT(*) FROM "subtasks" LEFT JOIN "tasks" ON "tasks"."id"="subtasks"."task_id" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id" WHERE "user_id" = ? AND projects.is_active = ? AND subtasks.status IN (?, ?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00014185905456543 ALL_QUERIES_DURATION=0.0036189556121826
+[2016-05-11 18:51:58] [debug] SELECT projects.*, users.username AS owner_username, users.name AS owner_name FROM "projects" LEFT JOIN "users" ON "users"."id"="projects"."owner_id"  WHERE projects.id IN (?, ?, ?, ?, ?)   ORDER BY projects.name ASC  LIMIT 10  OFFSET 0
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.0002439022064209 ALL_QUERIES_DURATION=0.0038628578186035
+[2016-05-11 18:51:58] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00017213821411133 ALL_QUERIES_DURATION=0.0040349960327148
+[2016-05-11 18:51:58] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00014901161193848 ALL_QUERIES_DURATION=0.0041840076446533
+[2016-05-11 18:51:58] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00013303756713867 ALL_QUERIES_DURATION=0.004317045211792
+[2016-05-11 18:51:58] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00015401840209961 ALL_QUERIES_DURATION=0.0044710636138916
+[2016-05-11 18:51:58] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00013208389282227 ALL_QUERIES_DURATION=0.0046031475067139
+[2016-05-11 18:51:58] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00012612342834473 ALL_QUERIES_DURATION=0.0047292709350586
+[2016-05-11 18:51:58] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00013208389282227 ALL_QUERIES_DURATION=0.0048613548278809
+[2016-05-11 18:51:58] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.0001370906829834 ALL_QUERIES_DURATION=0.0049984455108643
+[2016-05-11 18:51:58] [debug] SELECT * FROM "columns"   WHERE "project_id" = ?   ORDER BY "position" ASC
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00013208389282227 ALL_QUERIES_DURATION=0.0051305294036865
+[2016-05-11 18:51:58] [debug] SELECT "column_id", COUNT(*) AS total FROM "tasks"   WHERE "project_id" = ? AND "is_active" = ? GROUP BY "column_id"
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00013208389282227 ALL_QUERIES_DURATION=0.0052626132965088
+[2016-05-11 18:51:58] [debug] SELECT tasks.id, tasks.title, tasks.date_due, tasks.date_creation, tasks.project_id, tasks.color_id, tasks.time_spent, tasks.time_estimated, projects.name AS project_name FROM "tasks" LEFT JOIN "projects" ON "projects"."id"="tasks"."project_id"  WHERE tasks.owner_id = ? AND tasks.is_active = ? AND projects.is_active = ?   ORDER BY tasks.id ASC  LIMIT 10  OFFSET 0
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00016403198242188 ALL_QUERIES_DURATION=0.0054266452789307
+[2016-05-11 18:51:58] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00014710426330566 ALL_QUERIES_DURATION=0.0055737495422363
+[2016-05-11 18:51:58] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.00016093254089355 ALL_QUERIES_DURATION=0.0057346820831299
+[2016-05-11 18:51:58] [debug] SELECT 1 FROM "user_has_unread_notifications"  WHERE "user_id" = ?
+[2016-05-11 18:51:58] [debug] QUERY_DURATION=0.0015590190887451 ALL_QUERIES_DURATION=0.007293701171875
+[2016-05-11 18:51:58] [debug] SQL_QUERIES=27
+[2016-05-11 18:51:58] [debug] RENDERING=0.039628028869629
+[2016-05-11 18:51:58] [debug] MEMORY=1.83M
+[2016-05-11 18:51:58] [debug] URI=/proyectos/practicas/?controller=app&action=index
+[2016-05-11 18:51:58] [debug] ###############################################
+[2016-05-11 18:52:39] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:52:39] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:52:39] [debug] QUERY_DURATION=0.0020108222961426 ALL_QUERIES_DURATION=0.0020108222961426
+[2016-05-11 18:52:39] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:52:39] [debug] QUERY_DURATION=0.00017213821411133 ALL_QUERIES_DURATION=0.0021829605102539
+[2016-05-11 18:52:39] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:52:39] [debug] QUERY_DURATION=0.00012898445129395 ALL_QUERIES_DURATION=0.0023119449615479
+[2016-05-11 18:52:39] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:52:39] [debug] QUERY_DURATION=0.00013089179992676 ALL_QUERIES_DURATION=0.0024428367614746
+[2016-05-11 18:52:39] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:52:39] [debug] QUERY_DURATION=8.9168548583984E-5 ALL_QUERIES_DURATION=0.0025320053100586
+[2016-05-11 18:52:39] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:52:39] [debug] QUERY_DURATION=0.00010514259338379 ALL_QUERIES_DURATION=0.0026371479034424
+[2016-05-11 18:52:39] [debug] SQL_QUERIES=6
+[2016-05-11 18:52:39] [debug] RENDERING=0.017990112304688
+[2016-05-11 18:52:39] [debug] MEMORY=1.62M
+[2016-05-11 18:52:39] [debug] URI=/proyectos/practicas/?controller=app&action=status&_=1462999775155
+[2016-05-11 18:52:39] [debug] ###############################################
+[2016-05-11 18:52:59] [debug] Subscriber executed: Kanboard\Subscriber\BootstrapSubscriber::execute
+[2016-05-11 18:52:59] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_users" ON "project_has_users"."project_id"="projects"."id"  WHERE (project_has_users.user_id = ? OR projects.is_everybody_allowed = ?) AND projects.is_active IN (?)
+[2016-05-11 18:52:59] [debug] QUERY_DURATION=0.0020120143890381 ALL_QUERIES_DURATION=0.0020120143890381
+[2016-05-11 18:52:59] [debug] SELECT projects.id, projects.name FROM "projects" LEFT JOIN "project_has_groups" ON "project_has_groups"."project_id"="projects"."id" LEFT JOIN "group_has_users" ON "group_has_users"."group_id"="project_has_groups"."group_id"  WHERE group_has_users.user_id = ? AND projects.is_active IN (?)
+[2016-05-11 18:52:59] [debug] QUERY_DURATION=0.00017309188842773 ALL_QUERIES_DURATION=0.0021851062774658
+[2016-05-11 18:52:59] [debug] SELECT * FROM "actions"   WHERE "project_id" IN (?, ?, ?, ?, ?)
+[2016-05-11 18:52:59] [debug] QUERY_DURATION=0.00012612342834473 ALL_QUERIES_DURATION=0.0023112297058105
+[2016-05-11 18:52:59] [debug] SELECT * FROM "action_has_params"   WHERE "action_id" IN (?, ?, ?, ?, ?, ?, ?, ?)
+[2016-05-11 18:52:59] [debug] QUERY_DURATION=0.00013113021850586 ALL_QUERIES_DURATION=0.0024423599243164
+[2016-05-11 18:52:59] [debug] SELECT "option", "value" FROM "settings"
+[2016-05-11 18:52:59] [debug] QUERY_DURATION=8.9883804321289E-5 ALL_QUERIES_DURATION=0.0025322437286377
+[2016-05-11 18:52:59] [debug] SELECT 1 FROM "users"  WHERE "id" = ? AND "is_active" = ?
+[2016-05-11 18:52:59] [debug] QUERY_DURATION=0.0001060962677002 ALL_QUERIES_DURATION=0.0026383399963379
+[2016-05-11 18:52:59] [debug] SQL_QUERIES=6
+[2016-05-11 18:52:59] [debug] RENDERING=0.017609834671021
+[2016-05-11 18:52:59] [debug] MEMORY=1.61M
+[2016-05-11 18:52:59] [debug] URI=/proyectos/practicas/?controller=app&action=status&_=1463010715035
+[2016-05-11 18:52:59] [debug] ###############################################
