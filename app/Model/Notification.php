@@ -122,7 +122,7 @@ class Notification extends Base
                 return e('Assignee changed on task #%d', $event_data['task']['id']);
             case Task::EVENT_OVERDUE:
                 $nb = count($event_data['tasks']);
-                return $nb > 1 ? e('%d overdue tasks', $nb) : e('Task #%d is overdue', $event_data['tasks'][0]['id']);
+                return $nb > 1  ? e('%d overdue tasks', $nb) : e('Task #%d is overdue', $event_data['tasks'][0]['id']);
             case Task::EVENT_USER_MENTION:
                 return e('You were mentioned in the task #%d', $event_data['task']['id']);
             case Comment::EVENT_USER_MENTION:
