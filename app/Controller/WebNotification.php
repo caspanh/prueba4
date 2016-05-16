@@ -47,4 +47,11 @@ class WebNotification extends Base
 
         return $user_id;
     }
+
+    public function atrasadas()
+    {
+        shell_exec("./kanboard notification:overdue-tasks"); 
+        $user_id = $this->getUserId();
+        $this->response->redirect($this->helper->url->to('app', 'notifications'));
+    }
 }
