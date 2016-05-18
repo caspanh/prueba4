@@ -61,7 +61,6 @@
     </div>
 <?php endif ?>
 
-<?= $this->render('config/keyboard_shortcuts') ?>
 
 <div class="page-header">
     <h2><?= t('License') ?></h2>

@@ -3,22 +3,26 @@
 
 <?php if (empty($notifications)): ?>
     <p class="alert"><?= t('No new notifications.') ?></p>
+    <span class="color">
     <li>
-        <i class="fa fa-check-square-o fa-fw"></i>
+        <i class="fa facalendar-times-o fa-fw"></i>
         <?= $this->url->link(t('Tareas atrasadas'), 'webNotification', 'atrasadas') ?>
     </li>
+    </span>
 </div>
 <?php else: ?>
+    <span class="color">
     <ul>
         <li>
-            <i class="fa fa-check-square-o fa-fw"></i>
+            <i class="fa facheck-square-o fa-fw"></i>
             <?= $this->url->link(t('Mark all as read'), 'webNotification', 'flush', array('user_id' => $user['id'])) ?>
         </li>
         <li>
-            <i class="fa fa-check-square-o fa-fw"></i>
+            <i class="fa facalendar-times-o fa-fw"></i>
             <?= $this->url->link(t('Tareas atrasadas'), 'webNotification', 'atrasadas') ?>
         </li>
     </ul>
+    </span>
 </div>
 
     <table class="table-fixed table-small">
