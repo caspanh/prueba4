@@ -948,7 +948,7 @@ return array(
     'Group removed successfully.' => 'Grupo eliminado exitosamente',
     'Unable to remove this group.' => 'No es posible eliminar este grupo',
     'Project Permissions' => 'Permisos del proyecto',
-    'Manager' => 'Administrador',
+    'Manager' => 'Manager',
     'Project Manager' => 'Administrador de proyecto',
     'Project Member' => 'Miembro del proyecto',
     'Project Viewer' => 'Visor de proyectos',
