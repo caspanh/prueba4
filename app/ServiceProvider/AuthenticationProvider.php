@@ -138,6 +138,7 @@ class AuthenticationProvider implements ServiceProviderInterface
         $acl->add('UserImport', '*', Role::APP_ADMIN);
         $acl->add('User', array('index', 'create', 'save', 'authentication'), Role::APP_ADMIN);
         $acl->add('UserStatus', '*', Role::APP_ADMIN);
+        $acl->add('Postergar','*', Role::APP_ADMIN);
 
         return $acl;
     }
