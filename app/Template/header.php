@@ -9,7 +9,7 @@
             </span>
             <?php if (! empty($description)): ?>
                 <span class="tooltip" title='<?= $this->text->e($this->text->markdown($description)) ?>'>
-                    <i class="fa fa-info-circle"></i>
+                    <i class="fa fainfo-circle"></i>
                 </span>
             <?php endif ?>
         </h1>

@@ -5,7 +5,7 @@
 /*******************************************************************/
 
 // Enable/Disable debug
-define('DEBUG', false);
+define('DEBUG', true);
 
 // Debug file path
 define('DEBUG_FILE', __DIR__.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'debug.log');
@@ -20,13 +20,14 @@ define('FILES_DIR', 'data'.DIRECTORY_SEPARATOR.'files');
 define('MAIL_FROM', 'proyectos@dscorp.com.mx');
 
 // Mail transport available: "smtp", "sendmail", "mail" (PHP mail function), "postmark", "mailgun", "sendgrid"
-define('MAIL_TRANSPORT', 'mail');
+define('MAIL_TRANSPORT', 'smtp');
 
 // SMTP configuration to use when the "smtp" transport is chosen
-define('MAIL_SMTP_HOSTNAME', '');
+
+define('MAIL_SMTP_HOSTNAME', '192.168.2.13');
 define('MAIL_SMTP_PORT', 25);
-define('MAIL_SMTP_USERNAME', '');
-define('MAIL_SMTP_PASSWORD', '');
+define('MAIL_SMTP_USERNAME', 'cosdac-dscorp.com.mx');
+define('MAIL_SMTP_PASSWORD', '123456A');
 define('MAIL_SMTP_ENCRYPTION', null); // Valid values are "null", "ssl" or "tls"
 
 // Sendmail command to use when the transport is "sendmail"
