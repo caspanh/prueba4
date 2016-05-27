@@ -1148,7 +1148,7 @@ return array(
     'Set start date' => 'Iniciar tarea ',
     // 'Avatar' => '',
     'Upload my avatar image' => 'Cargar imagen de mi avatar',
-<<<<<<< HEAD
+
     'Remove my image' => 'Eliminar imagen',
     'The OAuth2 state parameter is invalid' => 'El parámetro de estado OAuth2 no es válido',
     'User not found.' => 'Usuario no encontrado',
@@ -1168,6 +1168,7 @@ return array(
     'Assign automatically a color based on a priority' => 'Asignar automáticamente un color basado en una prioridad',
     'Overdue tasks for the project(s) "%s"' => 'Las tareas atrasadas para el proyecto(s) "%s"',
     'Upload files' => 'Subir archivos',
+
     'Edit date' => 'Nueva fecha de entrega',
       
     'status:open assignee:me' => 'estado:abierto asignado:yo',
@@ -1267,10 +1268,5 @@ return array(
 
     'color:ambar' => 'color:amber',
     'color:amber' => 'color:ambar',
-
-
-
-    'assignee:%s' => 'asignado:%s',
-    'asignado:%s' => 'assignee:%s',
 );
 

@@ -3,6 +3,7 @@
     <a href="#" class="dropdown-menu dropdown-menu-link-icon" title="<?= t('Default filters') ?>"><i class="fa fa-filter fa-fw"></i><i class="fa fa-caret-down"></i></a>
     <ul>
         <li><a href="#" class="filter-helper filter-reset" data-filter="<?= isset($reset) ? $reset : '' ?>" title="<?= t('Keyboard shortcut: "%s"', 'r') ?>"><?= t('Reset filters') ?></a></li>
+
         <li><a href="#" class="filter-helper" data-filter="estado:abierto asignado:yo"><?= t('My tasks') ?></a></li>
         <li><a href="#" class="filter-helper" data-filter="estado:abierto asignado:yo dia:mañana"><?= t('My tasks due tomorrow') ?></a></li>
         <li><a href="#" class="filter-helper" data-filter="estado:abierto entregar:hoy"><?= t('Tasks due today') ?></a></li>
