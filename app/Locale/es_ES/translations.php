@@ -36,7 +36,7 @@ return array(
     'Remove user' => 'Eliminar un usuario',
     'Do you really want to remove this user: "%s"?' => '¿De verdad que desea suprimir a este usuario: « %s » ?',
     'New user' => 'Añadir un usuario',
-    'All users' => 'Todos los usuarios',
+    'All users' => 'Administración de usuarios',
     'Username' => 'Nombre de usuario',
     'Password' => 'Contraseña',
     'Administrator' => 'Administrador',
@@ -831,7 +831,7 @@ return array(
     'Shared project' => 'Proyecto compartido',
     'Project managers' => 'Administradores de proyecto',
     'Gantt chart for all projects' => 'Diagrama de Gantt para todos los proyectos',
-    'Projects list' => 'Lista de proyectos',
+    'Projects list' => 'Administrador de proyectos',
     'Gantt chart for this project' => 'Diagrama de Gantt para este proyecto',
     'Project board' => 'Tablero del proyecto',
     'End date:' => 'Fecha final ',
@@ -1167,4 +1167,6 @@ return array(
     'Assign automatically a color based on a priority' => 'Asignar automáticamente un color basado en una prioridad',
     'Overdue tasks for the project(s) "%s"' => 'Las tareas atrasadas para el proyecto(s) "%s"',
     'Upload files' => 'Subir archivos',
+    'Edit date' => 'Nueva fecha de entrega',
+      
 );
