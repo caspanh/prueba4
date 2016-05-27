@@ -13,7 +13,9 @@ class Search extends Base
     public function index()
     {
         $projects = $this->projectUserRole->getProjectsByUser($this->userSession->getId());
-        $search = urldecode($this->request->getStringParam('search'));
+        $searchs = urldecode($this->request->getStringParam('search'));
+        $search = t($searchs);
+        
         $nb_tasks = 0;
 
         $paginator = $this->paginator
@@ -38,7 +40,7 @@ class Search extends Base
 
         $this->response->html($this->helper->layout->app('search/index', array(
             'values' => array(
-                'search' => $search,
+                'search' => t($search),
                 'controller' => 'search',
                 'action' => 'index',
             ),
