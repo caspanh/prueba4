@@ -33,7 +33,7 @@ class TaskHelper extends Base
         if (ctype_digit($search)) {
             $filter->filterById($search);
         } else {
-            $filter->filterByTitle($search);
+            $filter->filterByTitle(t($search);
         }
 
         $this->response->json($filter->format());

@@ -1148,6 +1148,7 @@ return array(
     'Set start date' => 'Iniciar tarea ',
     // 'Avatar' => '',
     'Upload my avatar image' => 'Cargar imagen de mi avatar',
+<<<<<<< HEAD
     'Remove my image' => 'Eliminar imagen',
     'The OAuth2 state parameter is invalid' => 'El parámetro de estado OAuth2 no es válido',
     'User not found.' => 'Usuario no encontrado',
@@ -1169,4 +1170,107 @@ return array(
     'Upload files' => 'Subir archivos',
     'Edit date' => 'Nueva fecha de entrega',
       
+    'status:open assignee:me' => 'estado:abierto asignado:yo',
+    'estado:abierto asignado:yo' => 'status:open assignee:me',
+
+    'status:open assignee:me due:tomorrow' => 'estado:abierto asignado:yo dia:mañana',
+    'estado:abierto asignado:yo dia:mañana' => 'status:open assignee:me due:tomorrow',
+
+    'status:open due:today' => 'estado:abierto entregar:hoy',
+    'estado:abierto entregar:hoy' => 'status:open due:today',
+
+    'status:open due:tomorrow' => 'estado:abierto entregar:mañana',
+    'estado:abierto entregar:mañana' => 'status:open due:tomorrow',
+
+    'status:open due:yesterday' => 'estado:abierto entregar:ayer',
+    'estado:abierto entregar:ayer' => 'status:open due:yesterday',
+
+    'status:closed' => 'estado:cerrado',
+    'estado:cerrado' => 'status:closed',
+
+
+    'status:open' => 'estado:abierto',
+    'estado:abierto' => 'status:open',
+
+    'status:open assignee:nobody' => 'estado:abierto asignado:nadie',
+    'estado:abierto asignado:nadie' => 'status:open assignee:nobody',
+
+
+    'status:open category:none' => 'estado:abierto categoria:ninguna',
+    'estado:abierto categoria:ninguna' => 'status:open category:none',
+    
+    'column:hecho' => 'columna:hecho',
+    'columna:hecho' => 'column:hecho',   
+
+    'column:en_espera' => 'columna:en_espera',
+    'columna:en_espera' => 'column:en_espera', 
+
+    'column:en_curso' => 'columna:en_curso',
+    'columna:en_curso' => 'column:en_curso',
+
+    'column:listo' => 'columna:listo',
+    'columna:listo' => 'column:listo',
+
+    'project:%s' => 'proyecto:%s',
+    'proyecto:%s' => 'project:%s',
+
+
+
+   
+    'color:amarillo' => 'color:yellow',
+    'color:yellow' => 'color:amarillo',
+
+    'color:verde' => 'color:green',
+    'color:green' => 'color:verde',
+
+    'color:purpura' => 'color:purple',
+    'color:purple' => 'color:purpura',
+
+    'color:rojo' => 'color:red',
+    'color:red' => 'color:rojo',
+
+    'color:azul' => 'color:blue',
+    'color:blue' => 'color:azul',
+
+    'color:naranja' => 'color:orange',
+    'color:orange' => 'color:naranja',
+
+    'color:gris' => 'color:chalk',
+    'color:chalk' => 'color:gris',
+
+    'color:marron' => 'color:brown',
+    'color:brown' => 'color:marron',
+
+    'color:naranja oscuro' => 'color:deep_orange',
+    'color:deep_orange' => 'color:naranja oscuro',
+
+    'color:gris oscuro' => 'color:dark_grey',
+    'color:dark_grey' => 'color:gris oscuro',
+
+    'color:verde azulado' => 'color:teal',
+    'color:teal' => 'color:verde azulado',
+
+    'color:rosa' => 'color:pink',
+    'color:pink' => 'color:rosa',
+
+    'color:rosa' => 'color:pink',
+    'color:pink' => 'color:rosa',
+
+    'color:cian' => 'color:cyan',
+    'color:cyan' => 'color:cian',
+
+    'color:lima' => 'color:lime',
+    'color:lime' => 'color:lima',
+
+    'color:verde claro' => 'color:light_green',
+    'color:light_green' => 'color:verde claro',
+
+    'color:ambar' => 'color:amber',
+    'color:amber' => 'color:ambar',
+
+
+
+    'assignee:%s' => 'asignado:%s',
+    'asignado:%s' => 'assignee:%s',
 );
+
