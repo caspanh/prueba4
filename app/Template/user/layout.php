@@ -6,10 +6,7 @@
                 <i class="fa falock fa-fw"></i>
                 <?= $this->url->link(t('New private project'), 'ProjectCreation', 'createPrivate', array(), false, 'popover') ?>
             </li>
-             <li>
-                <i class="fa fasearch fa-fw"></i>
-                <?= $this->url->link(t('Search'), 'search', 'index') ?>
-            </li>
+            
               <li>
                 <i class="fa fafolder fa-fw"></i>
                 <?= $this->url->link(t('Project management'), 'project', 'index') ?>

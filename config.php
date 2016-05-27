@@ -13,7 +13,10 @@ define('DEBUG_FILE', __DIR__.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'deb
 // Plugins directory
 define('PLUGINS_DIR', 'plugins');
 
-// Folder for uploaded files
+// Folder for uploaded files]
+
+
+
 define('FILES_DIR', 'data'.DIRECTORY_SEPARATOR.'files');
 
 // E-mail address for the "From" header (notifications)
@@ -34,13 +37,13 @@ define('MAIL_SMTP_ENCRYPTION', null); // Valid values are "null", "ssl" or "tls"
 define('MAIL_SENDMAIL_COMMAND', '/usr/sbin/sendmail -bs');
 
 // Database driver: sqlite, mysql or postgres (sqlite by default)
-define('DB_DRIVER', 'sqlite');
+define('DB_DRIVER', 'postgres');
 
 // Mysql/Postgres username
-define('DB_USERNAME', 'root');
+define('DB_USERNAME', 'software');
 
 // Mysql/Postgres password
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 's0ftwar3');
 
 // Mysql/Postgres hostname
 define('DB_HOSTNAME', 'localhost');
@@ -49,7 +52,7 @@ define('DB_HOSTNAME', 'localhost');
 define('DB_NAME', 'kanboard');
 
 // Mysql/Postgres custom port (null = default port)
-define('DB_PORT', null);
+define('DB_PORT', '5432');
 
 // Enable LDAP authentication (false by default)
 define('LDAP_AUTH', false);

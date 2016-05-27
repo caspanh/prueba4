@@ -28,7 +28,7 @@
             </li>
             <li>
                     <i class="fa fauser fa-fw"></i>
-                    <?= $this->url->link(t('User management'), 'user', 'index') ?>
+                    <?= $this->url->link(t('Administración de usuarios'), 'user', 'index') ?>
                 </li>
 
                 <li>

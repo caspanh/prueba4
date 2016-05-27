@@ -21,16 +21,13 @@
 
     <?php if (empty($values['search'])): ?>
         <div class="listing">
+
+        
             <h3><?= t('Advanced search') ?></h3>
-            <p><?= t('Example of search:') ?><strong>project:"Nombre del proyecto" assignee:me due:tomorrow</strong></p>
             <ul>
-                <li><?= t('Search by project: ') ?><strong>project:"Nombre del proyecto"</strong></li>
-                <li><?= t('Search by column: ') ?><strong>column:"en_espera"</strong></li>
-                <li><?= t('Search by assignee: ') ?><strong>assignee:"nombre del Concesionario (administrador)"</strong></li>
-                <li><?= t('Search by color: ') ?><strong>color:"Blue"</strong></li>
-                <li><?= t('Search by category: ') ?><strong>category:"Feature Request"</strong></li>
-                <li><?= t('Search by description: ') ?><strong>description:"una descripcion breve"</strong></li>
-                <li><?= t('Search by due date: ') ?><strong>due:"2016-05-12"</strong></li>
+                <li><?= t('Search by column: ') ?><strong>columna:"en_espera"</strong></li>
+               
+                <li><?= t('Search by color: ') ?><strong>color:"azul"</strong></li>
             </ul>
             
         </div>

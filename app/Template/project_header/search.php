@@ -5,7 +5,7 @@
         <?= $this->form->hidden('project_id', $filters) ?>
         <?= $this->form->text('search', $filters, array(), array('placeholder="'.t('Filter').'"')) ?>
 
-        <?= $this->render('app/filters_helper', array('reset' => 'status:open', 'project' => $project)) ?>
+        <?= $this->render('app/filters_helper', array('reset' => 'estado:abierto', 'project' => $project)) ?>
 
         <?php if (isset($custom_filters_list) && ! empty($custom_filters_list)): ?>
             

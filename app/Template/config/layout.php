@@ -9,7 +9,7 @@
             </li>
         	 <li>
               <i class="fa fauser fa-fw"></i>
-                <?= $this->url->link(t('Gestion de Usuarios'), 'user', 'index') ?>
+                <?= $this->url->link(t('Administracion de usuarios'), 'user', 'index') ?>
                             </li>
             <li>
                 <i class="fa fauser fa-fw"></i>
