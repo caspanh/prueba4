@@ -1167,4 +1167,15 @@ return array(
     'Assign automatically a color based on a priority' => 'Asignar automáticamente un color basado en una prioridad',
     'Overdue tasks for the project(s) "%s"' => 'Las tareas atrasadas para el proyecto(s) "%s"',
     'Upload files' => 'Subir archivos',
+    'estatus:abierta' => 'status:open',
+    'status:open' => 'estatus:abierta',
+    'estatus:abierta assignado:yo' => 'status:open assignee:me', 
+    'status:open assignee:me' => 'estatus:abierta assignado:yo',
+    'color:rosa' => 'color:pink',
+    'color:pink' => 'color:rosa',
+    'color:azul' => 'color:blue',
+    
+    
+    'project:%' => 'proyecto:%',
+    'proyecto:%' => 'project:%',
 );
