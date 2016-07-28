@@ -37,13 +37,13 @@ define('MAIL_SMTP_ENCRYPTION', null); // Valid values are "null", "ssl" or "tls"
 define('MAIL_SENDMAIL_COMMAND', '/usr/sbin/sendmail -bs');
 
 // Database driver: sqlite, mysql or postgres (sqlite by default)
-define('DB_DRIVER', 'postgres');
+define('DB_DRIVER', 'sqlite');
 
 // Mysql/Postgres username
-define('DB_USERNAME', 'software');
+define('DB_USERNAME', '');
 
 // Mysql/Postgres password
-define('DB_PASSWORD', 's0ftwar3');
+define('DB_PASSWORD', '');
 
 // Mysql/Postgres hostname
 define('DB_HOSTNAME', 'localhost');
@@ -52,7 +52,7 @@ define('DB_HOSTNAME', 'localhost');
 define('DB_NAME', 'kanboard');
 
 // Mysql/Postgres custom port (null = default port)
-define('DB_PORT', '5432');
+define('DB_PORT', '');
 
 // Enable LDAP authentication (false by default)
 define('LDAP_AUTH', false);
