@@ -1,5 +1,6 @@
 <div class="page-header">
-    <h2><?= $this->text->e($file['name']) ?></h2>
+    <h2 class="modificar"><?= $this->text->e($file['name']) ?></h2>
+    <hr class="r">
 </div>
 <div class="file-viewer">
     <?php if ($file['is_image']): ?>
@@ -11,4 +12,7 @@
     <?php elseif ($type === 'text'): ?>
         <pre><?= $content ?></pre>
     <?php endif ?>
+
+    
+
 </div>

@@ -12,14 +12,14 @@
             <?php endif ?>
             
             <li>
-                <i class="fa falock fa-fw"></i>
+                <i class="fa fa-lock fa-fx"></i>
                 <?= $this->url->link(t('New private project'), 'ProjectCreation', 'createPrivate', array(), false, 'popover') ?>
             </li>
             <li>
-                <i class="fa fafolder fa-fw"></i><?= $this->url->link(t('Projects list'), 'project', 'index') ?>
+                <i class="fa fa-folder fa-fx"></i><?= $this->url->link(t('Projects list'), 'project', 'index') ?>
             </li>
             <?php if ($this->user->hasAccess('projectuser', 'managers')): ?>
-                <li><i class="fa fauser fa-fw"></i><?= $this->url->link(t('Users overview'), 'projectuser', 'managers') ?></li>
+                <li><i class="fa fa-user fa-fx"></i><?= $this->url->link(t('Users overview'), 'projectuser', 'managers') ?></li>
             <?php endif ?>
             </span>
         </ul>

@@ -48,8 +48,15 @@ class Board extends Base
     public function show()
     {
         $project = $this->getProject();
-        $search = $this->helper->projectHeader->getSearchQuery($project);
-
+        $searchs = $this->helper->projectHeader->getSearchQuery($project);
+        
+        if ($searchs == "status:open")
+        {
+            $search = $searchs;
+        }
+        else{
+            $search = t($searchs);
+        }
         $this->response->html($this->helper->layout->app('board/view_private', array(
             'swimlanes' => $this->taskFilter->search($search)->getBoard($project['id']),
             'project' => $project,

@@ -41,7 +41,10 @@
     'images' => $images
 )) ?>
 
+
+
 <?= $this->hook->render('template:task:show:before-comments', array('task' => $task, 'project' => $project)) ?>
+
 <?= $this->render('comments/show', array(
     'task' => $task,
     'comments' => $comments,

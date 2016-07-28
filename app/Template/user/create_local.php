@@ -33,9 +33,6 @@
             <?= $this->form->label(t('Add project member'), 'project_id') ?>
             <?= $this->form->select('project_id', $projects, $values, $errors) ?>
 
-            <?= $this->form->label(t('Timezone'), 'timezone') ?>
-            <?= $this->form->select('timezone', $timezones, $values, $errors) ?>
-
             <?= $this->form->label(t('Language'), 'language') ?>
             <?= $this->form->select('language', $languages, $values, $errors) ?>
 

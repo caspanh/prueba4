@@ -16,9 +16,6 @@
     <?= $this->form->label(t('Email'), 'email') ?>
     <?= $this->form->email('email', $values, $errors) ?>
 
-    <?= $this->form->label(t('Timezone'), 'timezone') ?>
-    <?= $this->form->select('timezone', $timezones, $values, $errors) ?>
-
     <?= $this->form->label(t('Language'), 'language') ?>
     <?= $this->form->select('language', $languages, $values, $errors) ?>
 

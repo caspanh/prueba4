@@ -6,7 +6,7 @@
         <?php else: ?>
             <?= $this->url->link(
                 $this->text->e($task['category_name']),
-                'boardPopover',
+                'TaskPopover',
                 'changeCategory',
                 array('task_id' => $task['id'], 'project_id' => $task['project_id']),
                 false,
@@ -28,6 +28,13 @@
 
     <?php if (! empty($task['date_due'])): ?>
         <span class="task-board-date <?= time() > $task['date_due'] ? 'task-board-date-overdue' : '' ?>">
+        <?php if ($this->user->hasAccess('Postergar', '*')): ?>
+        <?php if (time() > $task['date_due']): ?>
+
+            <?= $this->url->link(('<i class="fa fa-calendar-plus-o"></i>'), 'taskmodification', 'editDate', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, 'popover') ?> 
+
+        <?php endif ?>
+        <?php endif ?>
             <i class="fa fa-calendar"></i>
             <?= $this->dt->date($task['date_due']) ?>
         </span>

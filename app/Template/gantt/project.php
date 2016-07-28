@@ -4,11 +4,11 @@
         <ul>
         <span class="color">
             <li <?= $sorting === 'board' ? 'class="active"' : '' ?>>
-                <i class="fa fasort-numeric-asc fa-fw"></i>
+                <i class="fa fa-sort-numeric-asc fa-fx"></i>
                 <?= $this->url->link(t('Sort by position'), 'gantt', 'project', array('project_id' => $project['id'], 'sorting' => 'board')) ?>
             </li>
             <li <?= $sorting === 'date' ? 'class="active"' : '' ?>>
-                <i class="fa fasort-amount-asc fa-fw"></i>
+                <i class="fa fa-sort-amount-asc fa-fx"></i>
                 <?= $this->url->link(t('Sort by date'), 'gantt', 'project', array('project_id' => $project['id'], 'sorting' => 'date')) ?>
             </li>
             <li>
